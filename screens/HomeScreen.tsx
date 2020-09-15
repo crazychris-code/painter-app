@@ -1,36 +1,66 @@
 import * as React from 'react'
 import { StyleSheet } from 'react-native'
 
-import EditScreenInfo from '../components/EditScreenInfo'
-import { Text, View } from '../components/Themed'
+import {
+  Container,
+  Content,
+  List,
+  ListItem,
+  Text,
+  Left,
+  Thumbnail,
+  Body
+} from 'native-base'
 
 export default function HomeScreen () {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
-      <View
-        style={styles.separator}
-        lightColor='#eee'
-        darkColor='rgba(255,255,255,0.1)'
-      />
-      <EditScreenInfo path='/screens/HomeScreen.tsx' />
-    </View>
+    <Container>
+      <Content>
+        <List>
+          <ListItem avatar>
+            <Left>
+              <Thumbnail source={require('../assets/images/room1.jpg')} />
+            </Left>
+            <Body style={styles.body}>
+              <Text>Kumar Pratik</Text>
+              <Text note>14, Beverley Close, Barnes</Text>
+            </Body>
+          </ListItem>
+          <ListItem avatar>
+            <Left>
+              <Thumbnail source={require('../assets/images/room2.jpg')} />
+            </Left>
+            <Body style={styles.body}>
+              <Text>John Sims</Text>
+              <Text note>1, Church Road, Barnes</Text>
+            </Body>
+          </ListItem>
+          <ListItem avatar>
+            <Left>
+              <Thumbnail source={require('../assets/images/room3.jpg')} />
+            </Left>
+            <Body style={styles.body}>
+              <Text>Lisa Jones</Text>
+              <Text note>56, Richmond road, Richmond</Text>
+            </Body>
+          </ListItem>
+          <ListItem avatar>
+            <Left>
+              <Thumbnail source={require('../assets/images/room4.jpg')} />
+            </Left>
+            <Body style={styles.body}>
+              <Text>Lisa Jones</Text>
+              <Text note>44, Sheen Main Road, East Sheen</Text>
+            </Body>
+          </ListItem>
+        </List>
+      </Content>
+    </Container>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%'
+  body: {
+    marginLeft: '70px'
   }
 })
