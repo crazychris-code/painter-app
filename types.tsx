@@ -15,3 +15,7 @@ export type HomeParamList = {
 export type TodayParamList = {
   TodayScreen: undefined
 }
+
+export type TaskParamList = {
+  TaskScreen: undefined
+}

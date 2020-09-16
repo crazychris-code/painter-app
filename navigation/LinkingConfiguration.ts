@@ -15,6 +15,11 @@ export default {
             screens: {
               TodayScreen: 'today'
             }
+          },
+          Task: {
+            screens: {
+              TaskScreen: 'task'
+            }
           }
         }
       },
